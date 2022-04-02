@@ -1,0 +1,32 @@
+#tabpane
+{
+    -fx-tab-min-height: 5em;
+    -fx-tab-max-height: 5em;
+
+    -fx-tab-min-width: 0.5em;
+    -fx-tab-max-width: 0.5em;
+}
+
+.tab .tab-label{
+    -fx-background-color: transparent;
+    -fx-alignment: center;
+}
+
+.tab
+{
+    -fx-background-color: #D3D3D3;
+    -fx-background-insets: 0.0;
+    -fx-background-radius: 20 20 0 0;
+    -fx-padding: 0 50 0 50;
+}
+
+.tab:selected
+{
+    -fx-background-color: #585ebc;
+    -fx-border-width: 5;
+}
+.insertText{
+    -fx-background-color:  transparent;
+    -fx-border-color:  #000088;
+    -fx-border-width: 0 0 2 0;
+}

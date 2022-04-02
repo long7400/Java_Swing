@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="705.0" prefWidth="1038.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.EmployeeManagementController">
+   <children>
+      <TabPane id="tabpane" fx:id="tabpane" prefHeight="706.0" prefWidth="1222.0" side="RIGHT" stylesheets="@../CSS/tabcontrol.css" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab>
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #ffffff;" styleClass="tab-label">
+                     <children>
+                        <Pane prefHeight="50.0" prefWidth="1158.0" style="-fx-background-color: #8fb6f5;">
+                           <children>
+                              <Text fill="WHITE" layoutX="455.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="QUẢN LÝ NHÂN VIÊN" wrappingWidth="263.73669052124023">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </Pane>
+                        <TextField fx:id="txtSreachNV" layoutX="337.0" layoutY="612.0" prefHeight="45.0" prefWidth="246.0" promptText="Tìm kiếm" styleClass="insertText">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                        <TableView fx:id="nhanvienTable" layoutX="333.0" layoutY="60.0" onMouseClicked="#BindTableNV" onMousePressed="#BindTableNV" prefHeight="539.0" prefWidth="815.0">
+                           <columns>
+                              <TableColumn fx:id="idNVCol" prefWidth="162.39999389648438" style="-fx-alignment: center;" text="Mã Nhân Viên" />
+                              <TableColumn fx:id="tenNVCol" prefWidth="162.39999389648438" style="-fx-alignment: center;" text="Tên Nhân Viên" />
+                              <TableColumn fx:id="sdtNVCol" prefWidth="163.20001220703125" style="-fx-alignment: center;" text="Số Điện Thoại" />
+                              <TableColumn fx:id="dcNVCol" prefWidth="155.2000732421875" style="-fx-alignment: center;" text="Địa Chỉ" />
+                              <TableColumn fx:id="luongNVCol" prefWidth="172.00006103515625" style="-fx-alignment: center;" text="Lương" />
+                           </columns>
+                        </TableView>
+                        <Button layoutX="601.0" layoutY="623.0" mnemonicParsing="false" onAction="#SeachNVTextChange" prefHeight="34.0" prefWidth="68.0" styleClass="buttothder" stylesheets="@../CSS/ButtonCSS.css" text="Tìm" />
+                        <Line endX="537.4000244140625" layoutX="93.0" layoutY="381.0" rotate="90.0" startX="-100.0" />
+                        <TextField fx:id="tennvTextField" layoutX="40.0" layoutY="189.0" prefHeight="34.0" prefWidth="238.0" promptText="Nhân viên" styleClass="insertText">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="sdtnvTextField" layoutX="40.0" layoutY="262.0" prefHeight="34.0" prefWidth="238.0" promptText="Số ĐT" styleClass="insertText" stylesheets="@../CSS/tabcontrol.css">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="dcnvTextField" layoutX="40.0" layoutY="333.0" prefHeight="34.0" prefWidth="238.0" promptText="Địa chỉ" styleClass="insertText" stylesheets="@../CSS/tabcontrol.css">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </TextField>
+                        <Button layoutX="687.0" layoutY="623.0" mnemonicParsing="false" onAction="#clearNVDataButton" prefHeight="34.0" prefWidth="110.0" styleClass="buttothder" stylesheets="@../CSS/ButtonCSS.css" text="Làm mới" />
+                        <Button fx:id="addNV" layoutX="11.0" layoutY="625.0" mnemonicParsing="false" onAction="#addNVOnAction" prefHeight="43.0" prefWidth="88.0" styleClass="buttonadd" stylesheets="@../CSS/ButtonCSS.css" text="Thêm" />
+                        <Button fx:id="editNV" layoutX="108.0" layoutY="625.0" mnemonicParsing="false" onAction="#editNVOnAction" prefHeight="43.0" prefWidth="88.0" styleClass="buttonedit" stylesheets="@../CSS/ButtonCSS.css" text="Sửa" />
+                        <Button fx:id="deleNV" layoutX="211.0" layoutY="625.0" mnemonicParsing="false" onAction="#deleteNV" prefHeight="43.0" prefWidth="88.0" styleClass="buttonedele" stylesheets="@../CSS/ButtonCSS.css" text="Xóa" />
+                        <ToggleButton fx:id="btnTog" layoutX="9.0" layoutY="61.0" mnemonicParsing="false" onAction="#Toggle" prefHeight="30.0" prefWidth="163.0" text="Click để thao tác" />
+                        <TextField fx:id="luongnvTextField" layoutX="40.0" layoutY="415.0" prefHeight="34.0" prefWidth="238.0" promptText="Lương ( VND/Tháng )" styleClass="insertText" />
+                     </children>
+                  </AnchorPane>
+               </content>
+               <graphic>
+                  <FontAwesomeIcon fill="WHITE" glyphName="USERS" size="3em" />
+               </graphic>
+            </Tab>
+         </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="705.0" prefWidth="1038.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.ProductionManagementController">
+   <children>
+      <TabPane id="tabpane" fx:id="tabpane" prefHeight="706.0" prefWidth="1222.0" side="RIGHT" stylesheets="@../CSS/tabcontrol.css" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab>
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #ffffff;" styleClass="tab-label">
+                     <children>
+                        <Pane prefHeight="50.0" prefWidth="1158.0" style="-fx-background-color: #8fb6f5;">
+                           <children>
+                              <Text fill="WHITE" layoutX="455.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="QUẢN LÝ HÀNG HÓA" wrappingWidth="230.13671493530273">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </Pane>
+                        <TextField fx:id="txtSreach" layoutX="337.0" layoutY="612.0" prefHeight="45.0" prefWidth="246.0" promptText="Tìm kiếm" styleClass="insertText">
+                           <font>
+                              <Font size="14.0" />
+                           </font></TextField>
+                        <TableView fx:id="tableHH" layoutX="333.0" layoutY="60.0" onMouseClicked="#BindTable" onMousePressed="#BindTable" prefHeight="539.0" prefWidth="815.0">
+                          <columns>
+                            <TableColumn fx:id="idHCol" prefWidth="84.79998779296875" style="-fx-alignment: center;" text="Mã Hàng" />
+                            <TableColumn fx:id="nameCol" prefWidth="199.20001220703125" style="-fx-alignment: center;" text="Sản Phẩm" />
+                              <TableColumn fx:id="trinhtrangCol" prefWidth="108.0" style="-fx-alignment: center;" text="Số Lượng" />
+                              <TableColumn fx:id="giaCol" prefWidth="104.79998779296875" style="-fx-alignment: center;" text="Giá" />
+                              <TableColumn fx:id="loaiCol" prefWidth="143.20001220703125" style="-fx-alignment: center;" text="Loại" />
+                              <TableColumn fx:id="nhapkhauCol" prefWidth="177.60009765625" style="-fx-alignment: center;" text="Nhập Khẩu" />
+                          </columns>
+                        </TableView>
+                        <Button layoutX="601.0" layoutY="623.0" mnemonicParsing="false" onAction="#txtSeachTextChange" prefHeight="34.0" prefWidth="68.0" styleClass="buttothder" stylesheets="@../CSS/ButtonCSS.css" text="Tìm" />
+                        <Line endX="537.4000244140625" layoutX="93.0" layoutY="381.0" rotate="90.0" startX="-100.0" />
+                        <TextField fx:id="tenHHText" layoutX="40.0" layoutY="189.0" prefHeight="34.0" prefWidth="238.0" promptText="Hàng Hóa" styleClass="insertText">
+                           <font>
+                              <Font size="15.0" />
+                           </font></TextField>
+                        <TextField fx:id="giaTextField" layoutX="40.0" layoutY="262.0" prefHeight="34.0" prefWidth="238.0" promptText="Giá" styleClass="insertText" stylesheets="@../CSS/tabcontrol.css">
+                           <font>
+                              <Font size="15.0" />
+                           </font></TextField>
+                        <TextField fx:id="slTextField" layoutX="40.0" layoutY="333.0" prefHeight="34.0" prefWidth="238.0" promptText="Số Lượng" styleClass="insertText" stylesheets="@../CSS/tabcontrol.css">
+                           <font>
+                              <Font size="15.0" />
+                           </font></TextField>
+                        <ComboBox fx:id="nkCombobox" layoutX="40.0" layoutY="415.0" prefHeight="34.0" prefWidth="238.0" promptText="Nơi nhập khẩu" styleClass="insertText" stylesheets="@../CSS/tabcontrol.css" />
+                        <ComboBox fx:id="loaiCombobox" layoutX="40.0" layoutY="493.0" prefHeight="34.0" prefWidth="238.0" promptText="Loại" styleClass="insertText" />
+                        <Button layoutX="687.0" layoutY="623.0" mnemonicParsing="false" onAction="#clearCDataButton" prefHeight="34.0" prefWidth="110.0" styleClass="buttothder" stylesheets="@../CSS/ButtonCSS.css" text="Làm mới" />
+                        <Button fx:id="addhhButton" layoutX="11.0" layoutY="625.0" mnemonicParsing="false" onAction="#addCayOnAction" prefHeight="43.0" prefWidth="88.0" styleClass="buttonadd" stylesheets="@../CSS/ButtonCSS.css" text="Thêm" />
+                        <Button fx:id="edithhButtedon" layoutX="108.0" layoutY="625.0" mnemonicParsing="false" onAction="#editCayOnAction" prefHeight="43.0" prefWidth="88.0" styleClass="buttonedit" stylesheets="@../CSS/ButtonCSS.css" text="Sửa" />
+                        <Button fx:id="deletehhButton" layoutX="211.0" layoutY="625.0" mnemonicParsing="false" onAction="#DeleteC" prefHeight="43.0" prefWidth="88.0" styleClass="buttonedele" stylesheets="@../CSS/ButtonCSS.css" text="Xóa" />
+                        <ToggleButton fx:id="btnTogg" layoutX="9.0" layoutY="61.0" mnemonicParsing="false" onAction="#ButtonToG" prefHeight="30.0" prefWidth="163.0" text="Click để thao tác" />
+                     </children></AnchorPane>
+            </content>
+               <graphic>
+                  <FontAwesomeIcon fill="WHITE" glyphName="UNIVERSITY" size="3em" />
+               </graphic>
+          </Tab>
+          <Tab text="Untitled Tab 2">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+                     <children>
+                        <TableView fx:id="NNKTable" layoutX="333.0" layoutY="60.0" onMouseClicked="#BindTable2" onMousePressed="#BindTable2" prefHeight="539.0" prefWidth="815.0">
+                          <columns>
+                            <TableColumn fx:id="idNNKCol" prefWidth="160.0" style="-fx-alignment: center;" text="Mã nhập" />
+                            <TableColumn fx:id="NNKCol" prefWidth="206.4000244140625" style="-fx-alignment: center;" text="Nơi Nhập" />
+                              <TableColumn fx:id="DiachiCol" prefWidth="242.4000244140625" style="-fx-alignment: center;" text="Địa Chỉ" />
+                              <TableColumn fx:id="SDTCol" prefWidth="208.00006103515625" style="-fx-alignment: center;" text="Số Điện Thoại" />
+                          </columns>
+                        </TableView>
+                        <Pane prefHeight="50.0" prefWidth="1158.0" style="-fx-background-color: #8fb6f5;">
+                           <children>
+                              <Text fill="WHITE" layoutX="463.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NHẬU KHẨU" wrappingWidth="144.53668212890625">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </Pane>
+                        <TextField fx:id="nnkTextFleid" layoutX="40.0" layoutY="189.0" prefHeight="34.0" prefWidth="238.0" promptText="Nơi nhập hàng" styleClass="insertText">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="dcTextFleid" layoutX="40.0" layoutY="262.0" prefHeight="34.0" prefWidth="238.0" promptText="Địa chỉ" styleClass="insertText">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="sdtTextFeild" layoutX="40.0" layoutY="333.0" prefHeight="34.0" prefWidth="238.0" promptText="Số điện thoại" styleClass="insertText">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </TextField>
+                        <Button fx:id="addnnkButton" layoutX="11.0" layoutY="625.0" mnemonicParsing="false" onAction="#addNNKOnAction" prefHeight="43.0" prefWidth="88.0" styleClass="buttonadd" text="Thêm" />
+                        <Button fx:id="editnnkButon" layoutX="108.0" layoutY="625.0" mnemonicParsing="false" onAction="#editNKOnAction" prefHeight="43.0" prefWidth="88.0" styleClass="buttonedit" text="Sửa" />
+                        <Button fx:id="delennkButon" layoutX="211.0" layoutY="625.0" mnemonicParsing="false" onAction="#DeleteN" prefHeight="43.0" prefWidth="88.0" styleClass="buttonedele" text="Xóa" />
+                        <Button layoutX="601.0" layoutY="623.0" mnemonicParsing="false" onAction="#txtSeachNKTextChange" prefHeight="34.0" prefWidth="68.0" styleClass="buttothder" text="Tìm" />
+                        <Button layoutX="687.0" layoutY="623.0" mnemonicParsing="false" onAction="#clearNDataButton" prefHeight="34.0" prefWidth="110.0" styleClass="buttothder" text="Làm mới" />
+                        <TextField fx:id="txtSreachN" layoutX="337.0" layoutY="612.0" prefHeight="45.0" prefWidth="246.0" promptText="Tìm kiếm" styleClass="insertText">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                        <Line endX="537.4000244140625" layoutX="93.0" layoutY="381.0" rotate="-90.0" startX="-100.0" />
+                        <ToggleButton fx:id="btnToggN" layoutX="9.0" layoutY="61.0" mnemonicParsing="false" onAction="#ButtonToGN" prefHeight="30.0" prefWidth="163.0" text="Click để thao tác" />
+                     </children>
+                     <stylesheets>
+                        <URL value="@../CSS/ButtonCSS.css" />
+                        <URL value="@../CSS/tabcontrol.css" />
+                     </stylesheets></AnchorPane>
+            </content>
+               <graphic>
+                  <FontAwesomeIcon fill="WHITE" glyphName="DATABASE" size="2.8em" />
+               </graphic>
+          </Tab>
+            <Tab text="Untitled Tab">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="527.0" prefWidth="885.0" style="-fx-background-color: #ffffff;" stylesheets="@../CSS/ButtonCSS.css">
+                     <children>
+                        <ToggleButton fx:id="btnToggL" layoutX="9.0" layoutY="61.0" mnemonicParsing="false" onAction="#ButtonToGL" prefHeight="34.0" prefWidth="163.0" text="Click để thao tác" />
+                        <TextField fx:id="loaispTextFeild" layoutX="113.0" layoutY="179.0" prefHeight="46.0" prefWidth="314.0" promptText="Loại Hàng" styleClass="insertText">
+                           <font>
+                              <Font size="15.0" />
+                           </font></TextField>
+                        <TextField fx:id="txtSreachL" layoutX="685.0" layoutY="277.0" prefHeight="45.0" prefWidth="246.0" promptText="Tìm kiếm" styleClass="insertText">
+                           <font>
+                              <Font size="15.0" />
+                           </font></TextField>
+                        <Button fx:id="addLButton" layoutX="102.0" layoutY="269.0" mnemonicParsing="false" onAction="#addLoaiOnAction" prefHeight="38.0" prefWidth="97.0" styleClass="buttonadd" text="Thêm" />
+                        <Button fx:id="deleLButton" layoutX="220.0" layoutY="269.0" mnemonicParsing="false" onAction="#editLoaiOnAction" prefHeight="38.0" prefWidth="97.0" styleClass="buttonedit" text="Sửa" />
+                        <Button fx:id="edtLButton" layoutX="343.0" layoutY="269.0" mnemonicParsing="false" onAction="#deleteL" prefHeight="38.0" prefWidth="97.0" styleClass="buttonedele" text="Xóa" />
+                        <Button layoutX="1024.0" layoutY="287.0" mnemonicParsing="false" onAction="#clearLDataButton" prefHeight="34.0" prefWidth="110.0" styleClass="buttothder" text="Làm mới" />
+                        <Button layoutX="945.0" layoutY="288.0" mnemonicParsing="false" onAction="#txtSeachLoaiTextChange" prefHeight="34.0" prefWidth="68.0" styleClass="buttothder" text="Tìm" />
+                        <TableView fx:id="loaiTable" layoutX="20.0" layoutY="340.0" onMouseClicked="#BindTableL" onMousePressed="#BindTableL" prefHeight="342.0" prefWidth="1116.0">
+                          <columns>
+                            <TableColumn fx:id="idLCol" prefWidth="558.4000186920166" style="-fx-alignment: center;" text="Mã Loại" />
+                            <TableColumn fx:id="tenLCol" prefWidth="556.0" style="-fx-alignment: center;" text="Loại" />
+                          </columns>
+                        </TableView>
+                        <Pane prefHeight="50.0" prefWidth="1159.0" style="-fx-background-color: #8fb6f5;">
+                           <children>
+                              <Text fill="WHITE" layoutX="483.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PHÂN LOẠI" wrappingWidth="129.336669921875">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </Pane>
+                     </children></AnchorPane>
+              </content>
+               <graphic>
+                  <FontAwesomeIcon fill="WHITE" glyphName="CUBES" size="3em" />
+               </graphic>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

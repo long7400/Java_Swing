@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="522.0" prefWidth="826.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.LoginController">
+   <children>
+      <BorderPane prefHeight="522.0" prefWidth="826.0">
+         <left>
+            <AnchorPane prefHeight="522.0" prefWidth="348.0" style="-fx-background-color: #332e85;" BorderPane.alignment="CENTER">
+               <children>
+                  <FontAwesomeIcon fill="WHITE" glyphName="TREE" layoutX="119.0" layoutY="250.0" size="10em" />
+                  <Text fill="WHITE" layoutX="75.0" layoutY="297.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SHOP CÂY CẢNH NHL" wrappingWidth="193.33673095703125">
+                     <font>
+                        <Font name="Arial" size="18.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+         </left>
+         <center>
+            <AnchorPane prefHeight="522.0" prefWidth="475.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TextField fx:id="txtUsername" layoutX="154.0" layoutY="188.0" prefHeight="38.0" prefWidth="223.0" promptText="Nhập Tài Khoản" style="-fx-background-color: transparent; -fx-border-color: #000088; -fx-border-width: 0px 0px 2px 0px;" />
+                  <PasswordField fx:id="txtPassword" layoutX="153.0" layoutY="257.0" prefHeight="38.0" prefWidth="225.0" promptText="Nhập Mật Khẩu" style="-fx-background-color: transparent; -fx-border-color: #000088; -fx-border-width: 0px 0px 2px 0px;" />
+                  <FontAwesomeIcon fill="#332e85" glyphName="USER" layoutX="117.0" layoutY="220.0" size="2.5em" wrappingWidth="14.228620529174805" />
+                  <FontAwesomeIcon fill="#332e85" glyphName="KEY" layoutX="115.0" layoutY="291.0" size="2.5em" />
+                  <Button fx:id="loginButton" layoutX="208.0" layoutY="335.0" mnemonicParsing="false" onAction="#login" prefHeight="40.0" prefWidth="107.0" style="-fx-background-color: #332e85;" text="Đăng Nhập" textFill="#f2f2f2">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="22.0" layoutY="485.0" text="©Copyright Nhóm Java" textFill="#000088">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIcon fill="#332e85" glyphName="LOCK" layoutX="233.0" layoutY="117.0" size="6em" />
+                  <Text fill="#332e85" layoutX="199.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Đăng Nhập" wrappingWidth="122.93670654296875">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Text>
+                  <Button layoutX="442.0" layoutY="4.0" mnemonicParsing="false" onAction="#cancel" prefHeight="21.0" prefWidth="25.0" style="-fx-background-color: transparent;">
+                     <graphic>
+                        <FontAwesomeIcon fill="#000088" glyphName="CLOSE" size="1.5em" />
+                     </graphic>
+                  </Button>
+                  <Hyperlink fx:id="linkTo" layoutX="338.0" layoutY="482.0" onAction="#linkHP" text="Liên hệ chúng tôi ">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Hyperlink>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

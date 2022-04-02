@@ -1,0 +1,9 @@
+.buttonNav{
+    -fx-background-color: #332e85;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 18px;
+}
+
+.buttonNav:hover {
+    -fx-background-color:  #585ebc;
+}

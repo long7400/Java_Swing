@@ -1,0 +1,73 @@
+.buttonadd{
+    -fx-background-color: #006600;
+    -fx-background-radius: 40;
+    -fx-text-fill: white;
+    -fx-font-size: 17px;
+}
+.buttonadd:hover {
+    -fx-background-color: #008B00;
+}
+.buttonadd:pressed:hover {
+    -fx-background-color: #008B00;
+    -fx-scale-y: 0.95;
+    -fx-scale-x: 0.95;
+}
+.buttothder{
+    -fx-background-color: white;
+    -fx-border-color: black;
+}
+.buttothder:hover {
+    -fx-background-color: #ECECEC;
+    -fx-border-color: black;
+
+}
+.buttothder:pressed:hover {
+    -fx-background-color:#8B8B7A ;
+    -fx-border-color: black;
+    -fx-text-fill: white;
+    -fx-scale-y: 0.95;
+    -fx-scale-x: 0.95;
+}
+.buttonedit{
+    -fx-background-color: #EEC900;
+    -fx-background-radius: 40;
+    -fx-text-fill: white;
+    -fx-font-size: 17px;
+}
+.buttonedit:hover {
+    -fx-background-color: #FFD700;
+}
+.buttonedit:pressed:hover {
+    -fx-background-color: #FFD700;
+    -fx-scale-y: 0.95;
+    -fx-scale-x: 0.95;
+}
+.buttonedele{
+    -fx-background-color: #CC3300;
+    -fx-background-radius: 40;
+    -fx-text-fill: white;
+    -fx-font-size: 17px;
+}
+.buttonedele:hover {
+    -fx-background-color:  #FF0000;
+
+}
+.buttonedele:pressed:hover {
+    -fx-background-color:  #FF0000;
+    -fx-scale-y: 0.95;
+    -fx-scale-x: 0.95;
+}
+.buttonUi{
+    -fx-background-color:  #000000;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+}
+.buttonUi:pressed:hover{
+    -fx-text-fill:  #ff8c00;
+    -fx-scale-y: 0.95;
+    -fx-scale-x: 0.95;
+}
+.buttonUi:hover{
+    -fx-text-fill:  #ff8c00;
+
+}

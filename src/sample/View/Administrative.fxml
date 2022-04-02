@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="705.0" prefWidth="1224.0" style="-fx-background-color: white;" stylesheets="@../CSS/tabcontrol.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.AdministrativeController">
+   <children>
+      <AnchorPane fx:id="layerfirts" prefHeight="705.0" prefWidth="632.0">
+         <children>
+            <AnchorPane fx:id="layer1" layoutX="285.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="706.0" prefWidth="940.0" style="-fx-background-color: white;">
+               <children>
+                  <TextField fx:id="usernametxt" layoutX="341.0" layoutY="246.0" prefHeight="35.0" prefWidth="298.0" promptText="Username" styleClass="insertText" />
+                  <TextField fx:id="gmailtxt" layoutX="341.0" layoutY="358.0" prefHeight="35.0" prefWidth="298.0" promptText="Gmail" styleClass="insertText" />
+                  <ComboBox fx:id="pqCombox" layoutX="341.0" layoutY="416.0" prefHeight="35.0" prefWidth="298.0" promptText="Quyền Hạn" styleClass="insertText" />
+                  <ComboBox fx:id="nvCombox1" layoutX="341.0" layoutY="473.0" prefHeight="35.0" prefWidth="298.0" promptText="Nhân Viên" styleClass="insertText" />
+                  <PasswordField fx:id="txtPass" layoutX="341.0" layoutY="300.0" prefHeight="36.0" prefWidth="298.0" promptText="Password" styleClass="insertText" />
+                  <Button fx:id="dangkyButton1" layoutX="426.0" layoutY="539.0" onAction="#dangkyOnAction" prefHeight="39.0" prefWidth="135.0" style="-fx-background-color: #585ebc; -fx-border-radius: 200; -fx-border-color: white; -fx-background-radius: 200; -fx-text-fill: white;" text="ĐĂNG KÝ">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <FontAwesomeIcon fx:id="dk1" glyphName="KEY" layoutX="301.0" layoutY="329.0" size="2.5em" />
+                  <FontAwesomeIcon fx:id="dk2" glyphName="USER" layoutX="302.0" layoutY="277.0" size="2.5em" />
+                  <FontAwesomeIcon fx:id="dk3" glyphName="ENVELOPE" layoutX="300.0" layoutY="388.0" size="2.5em" />
+                  <FontAwesomeIcon fx:id="dk4" glyphName="CHAIN" layoutX="302.0" layoutY="447.0" size="2.5em" />
+                  <FontAwesomeIcon fx:id="dk5" glyphName="USERS" layoutX="302.0" layoutY="502.0" size="2.5em" text="" />
+                  <FontAwesomeIcon fx:id="dk6" glyphName="USER_PLUS" layoutX="460.0" layoutY="179.0" size="5em" />
+                  <Text fx:id="dangkyTxt" layoutX="438.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ĐĂNG KÝ">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="txt1" layoutX="51.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" text="THỐNG KÊ" wrappingWidth="221.0">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Text>
+                  <Line fx:id="line1" endX="100.0" layoutX="152.0" layoutY="150.0" startX="-100.0" />
+                  <Button fx:id="but1" layoutX="93.0" layoutY="184.0" mnemonicParsing="false" onAction="#hdOnAction" prefHeight="53.0" prefWidth="117.0" text="THU NHẬP" />
+                  <Button fx:id="but2" layoutX="243.0" layoutY="183.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="135.0" text="QL.HÓA ĐƠN" />
+                  <Text fx:id="txt2" layoutX="52.0" layoutY="345.0" strokeType="OUTSIDE" strokeWidth="0.0" text="QUẢN LÝ TÀI KHOẢN" wrappingWidth="377.800048828125">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Text>
+                  <Line fx:id="line2" endX="254.39996337890625" layoutX="156.0" layoutY="361.0" startX="-100.0" />
+                  <Button fx:id="but3" layoutX="93.0" layoutY="403.0" mnemonicParsing="false" onAction="#qlAccOnAction" prefHeight="53.0" prefWidth="117.0" text="TÀI KHOẢN" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="layer2" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="706.0" prefWidth="285.0" style="-fx-background-color: #585ebc; -fx-border-color: white; -fx-border-image-width: 3px;" StackPane.alignment="CENTER_LEFT">
+         <children>
+            <Label fx:id="hello1" alignment="CENTER" contentDisplay="CENTER" layoutX="38.0" layoutY="112.0" prefHeight="39.0" prefWidth="211.0" text="KHU VỰC ADMIN" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="username1" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="162.0" prefHeight="23.0" prefWidth="267.0" text="TXTUSERNAME" textAlignment="CENTER" textFill="WHITE" />
+            <Button fx:id="dangkyButton" layoutX="77.0" layoutY="250.0" onMouseClicked="#btn" prefHeight="39.0" prefWidth="150.0" style="-fx-background-color: #585ebc; -fx-border-radius: 200; -fx-border-color: white; -fx-background-radius: 200; -fx-text-fill: white;" text="ĐĂNG KÝ">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="adminButton" layoutX="77.0" layoutY="250.0" onMouseClicked="#btn2" prefHeight="39.0" prefWidth="150.0" style="-fx-background-color: #585ebc; -fx-border-radius: 200; -fx-border-color: white; -fx-background-radius: 200; -fx-text-fill: white;" text="ADMINISTRATIVE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <FontAwesomeIcon fx:id="id1" fill="WHITE" glyphName="TREE" layoutX="101.0" layoutY="557.0" size="9em" />
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

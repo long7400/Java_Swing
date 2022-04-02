@@ -1,0 +1,32 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="DoanJV">
+    <output-path>$PROJECT_DIR$/out/artifacts/DoanJV</output-path>
+    <properties id="javafx-properties">
+      <options>
+        <option name="appClass" value="sample.Main" />
+        <option name="description" value="" />
+        <option name="htmlPlaceholderId" value="" />
+        <option name="icons">
+          <JavaFxApplicationIcons>
+            <option name="windowsIcon" value="$PROJECT_DIR$/src/sample/IMG/christmass_tree.ico" />
+          </JavaFxApplicationIcons>
+        </option>
+        <option name="nativeBundle" value="all" />
+        <option name="title" value="" />
+        <option name="vendor" value="" />
+        <option name="version" value="" />
+      </options>
+    </properties>
+    <root id="root">
+      <element id="archive" name="DoanJV.jar">
+        <element id="module-output" name="DoanJV" />
+        <element id="library" level="project" name="fontawesomefx-8.2" />
+        <element id="library" level="project" name="fontawesomefx-8.9" />
+        <element id="library" level="project" name="Java EE 6-Java EE 6" />
+        <element id="library" level="project" name="jfoenix-8.0.10" />
+        <element id="library" level="project" name="mssql-jdbc-8.2.2.jre8" />
+        <element id="file-copy" path="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.18/lombok-1.18.18.jar" />
+      </element>
+    </root>
+  </artifact>
+</component>

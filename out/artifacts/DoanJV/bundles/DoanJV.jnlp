@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="DoanJV.jnlp">
+  <information>
+    <title>DoanJV</title>
+    <vendor>Unknown</vendor>
+    <description>DoanJV</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="DoanJV.jar" size="134028" download="eager" />
+    <jar href="fontawesomefx-8.2.jar" size="180341" download="eager" />
+    <jar href="fontawesomefx-8.9.jar" size="571068" download="eager" />
+    <jar href="javax.annotation.jar" size="7713" download="eager" />
+    <jar href="javax.ejb.jar" size="47581" download="eager" />
+    <jar href="javax.jms.jar" size="25957" download="eager" />
+    <jar href="javax.persistence.jar" size="129793" download="eager" />
+    <jar href="javax.resource.jar" size="44511" download="eager" />
+    <jar href="javax.servlet.jar" size="69933" download="eager" />
+    <jar href="javax.servlet.jsp.jar" size="78836" download="eager" />
+    <jar href="javax.servlet.jsp.jstl.jar" size="28120" download="eager" />
+    <jar href="javax.transaction.jar" size="9714" download="eager" />
+    <jar href="jfoenix-8.0.10.jar" size="2710207" download="eager" />
+    <jar href="jfoenix-9.0.10.jar" size="2432549" download="eager" />
+    <jar href="lombok-1.18.18.jar" size="1922103" download="eager" />
+    <jar href="mssql-jdbc-8.2.2.jre8.jar" size="1267297" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="600" height="400" main-class="sample.Main"  name="DoanJV" />
+  <update check="background"/>
+</jnlp>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="632.0" prefWidth="945.0" styleClass="insertText" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.RegistrationController">
+   <children>
+      <TableView fx:id="accTable" layoutX="286.0" layoutY="116.0" onMouseClicked="#BindTable" onMousePressed="#BindTable" prefHeight="426.0" prefWidth="654.0">
+        <columns>
+          <TableColumn fx:id="usernameCol" prefWidth="126.39996337890625" style="-fx-alignment: center;" text="Username" />
+          <TableColumn fx:id="passCol" prefWidth="123.19998168945312" style="-fx-alignment: center;" text="Password" />
+            <TableColumn fx:id="gmailCol" minWidth="8.000030517578125" prefWidth="126.40008544921875" style="-fx-alignment: center;" text="Gmail" />
+            <TableColumn fx:id="pqCol" prefWidth="147.99996948242188" style="-fx-alignment: center;" text="Quyền Hạn" />
+            <TableColumn fx:id="nvCol" prefWidth="131.20001220703125" style="-fx-alignment: center;" text="Nhân Viên" />
+        </columns>
+      </TableView>
+      <VBox layoutY="105.0" prefHeight="488.0" prefWidth="282.0">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <TextField fx:id="usernametxt" prefHeight="35.0" prefWidth="246.0" promptText="Username" styleClass="insertText">
+                     <HBox.margin>
+                        <Insets left="20.0" top="40.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <TextField fx:id="passwordtxt" prefHeight="35.0" prefWidth="246.0" promptText="Password" styleClass="insertText">
+                     <HBox.margin>
+                        <Insets left="20.0" top="30.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <TextField fx:id="gmailtxt" prefHeight="35.0" prefWidth="246.0" promptText="Gmail" styleClass="insertText">
+                     <HBox.margin>
+                        <Insets left="20.0" top="30.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <ComboBox fx:id="pqCombox" prefHeight="35.0" prefWidth="246.0" promptText="Quyền Hạn" styleClass="insertText">
+                     <HBox.margin>
+                        <Insets left="20.0" top="30.0" />
+                     </HBox.margin>
+                  </ComboBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <ComboBox fx:id="nvCombox" prefHeight="35.0" prefWidth="246.0" promptText="Nhân Viên" styleClass="insertText">
+                     <HBox.margin>
+                        <Insets left="20.0" top="30.0" />
+                     </HBox.margin>
+                  </ComboBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <HBox layoutX="286.0" layoutY="550.0" prefHeight="67.0" prefWidth="654.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#editOnAction" prefHeight="39.0" prefWidth="90.0" styleClass="buttonedit" text="Sửa">
+               <HBox.margin>
+                  <Insets left="12.0" />
+               </HBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#Delete" prefHeight="39.0" prefWidth="86.0" styleClass="buttonedele" text="Xóa">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#clearDataButton" prefHeight="26.0" prefWidth="90.0" styleClass="buttothder" text="Làm mới">
+               <HBox.margin>
+                  <Insets left="7.0" top="6.0" />
+               </HBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#txtSeachTextChange" prefHeight="26.0" prefWidth="53.0" styleClass="buttothder" text="Tìm">
+               <HBox.margin>
+                  <Insets left="7.0" top="6.0" />
+               </HBox.margin>
+            </Button>
+            <TextField fx:id="txtSreach" prefHeight="26.0" prefWidth="179.0" promptText="Tìm kiếm" styleClass="insertText">
+               <HBox.margin>
+                  <Insets left="7.0" top="6.0" />
+               </HBox.margin>
+            </TextField>
+         </children>
+      </HBox>
+      <Pane prefHeight="84.0" prefWidth="945.0" style="-fx-background-color: #585ebc;">
+         <children>
+            <Text fill="WHITE" layoutX="385.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="QUẢN LÝ TÀI KHOẢN" wrappingWidth="231.1999877929686">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+   </children>
+   <stylesheets>
+      <URL value="@../CSS/ButtonCSS.css" />
+      <URL value="@../CSS/tabcontrol.css" />
+   </stylesheets>
+</AnchorPane>

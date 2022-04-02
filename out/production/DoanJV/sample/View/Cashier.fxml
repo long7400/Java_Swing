@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="705.0" prefWidth="1038.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.CashierController">
+   <children>
+      <TabPane id="tabpane" layoutY="1.0" prefHeight="706.0" prefWidth="1222.0" side="RIGHT" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Untitled Tab 1">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+                     <children>
+                        <Pane prefHeight="50.0" prefWidth="1158.0" style="-fx-background-color: #8fb6f5;">
+                           <children>
+                              <Text fill="WHITE" layoutX="518.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ĐẶT HÀNG" wrappingWidth="121.336669921875">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </Pane>
+                        <GridPane layoutX="25.0" layoutY="60.0" prefHeight="634.0" prefWidth="557.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints maxHeight="316.6000122070312" minHeight="10.0" prefHeight="43.2" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="611.7999862670898" minHeight="10.0" prefHeight="600.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label prefHeight="27.0" prefWidth="131.0" text="Ngày Tạo Đơn: ">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="txtNgayBan" prefHeight="20.0" prefWidth="137.0" text="Hello">
+                                 <GridPane.margin>
+                                    <Insets left="112.0" />
+                                 </GridPane.margin>
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="26.0" prefWidth="125.0" text="Người Tạo Đơn: ">
+                                 <GridPane.margin>
+                                    <Insets left="240.0" />
+                                 </GridPane.margin>
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="iduser" prefHeight="26.0" prefWidth="141.0" text="Label">
+                                 <GridPane.margin>
+                                    <Insets left="362.0" />
+                                 </GridPane.margin>
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <TableView fx:id="tableCay" onMouseClicked="#setBill" prefHeight="595.0" prefWidth="566.0" GridPane.rowIndex="1">
+                                <columns>
+                                  <TableColumn fx:id="cayCol" prefWidth="111.19997787475586" text="Mã" />
+                                  <TableColumn fx:id="tcayCol" prefWidth="119.20002746582031" text="Mặt Hàng" />
+                                    <TableColumn fx:id="tonCol" prefWidth="174.3999786376953" text="Tồn Kho" />
+                                    <TableColumn fx:id="giaCCol" prefWidth="166.4000244140625" text="Giá" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </GridPane>
+                        <GridPane layoutX="639.0" layoutY="63.0" prefHeight="425.0" prefWidth="495.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                              <RowConstraints maxHeight="402.1999877929687" minHeight="10.0" prefHeight="35.2" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="402.1999877929687" minHeight="10.0" prefHeight="352.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="211.8000244140625" minHeight="10.0" prefHeight="35.000036621093784" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#refresh" prefHeight="30.0" prefWidth="116.0" text="Hóa Đơn Mới">
+                                 <GridPane.margin>
+                                    <Insets left="-1.0" top="-1.0" />
+                                 </GridPane.margin>
+                              </Button>
+                              <TableView fx:id="hdTable" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                <columns>
+                                  <TableColumn fx:id="tenCol" prefWidth="120.800048828125" style="-fx-alignment: center;" text="Mặt Hàng" />
+                                  <TableColumn fx:id="slCol" prefWidth="151.99993896484375" style="-fx-alignment: center;" text="Số Lượng" />
+                                    <TableColumn fx:id="giaCol" prefWidth="128.0001220703125" style="-fx-alignment: center;" text="Đơn Giá" />
+                                    <TableColumn fx:id="edit" prefWidth="95.199951171875" style="-fx-alignment: center;" text="Chỉnh Sửa" />
+                                </columns>
+                              </TableView>
+                              <Label prefHeight="18.0" prefWidth="75.0" text="Tạm Tính: " GridPane.rowIndex="2">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="txtTamtinh" prefHeight="20.0" prefWidth="156.0" text="Giá tổng" GridPane.rowIndex="2">
+                                 <GridPane.margin>
+                                    <Insets left="77.0" />
+                                 </GridPane.margin>
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="btnInHD" mnemonicParsing="false" onAction="#addBill" prefHeight="30.0" prefWidth="130.0" text="Tạo Hóa Đơn">
+                                 <GridPane.margin>
+                                    <Insets left="372.0" top="-1.0" />
+                                 </GridPane.margin>
+                              </Button>
+                           </children>
+                        </GridPane>
+                        <GridPane layoutX="639.0" layoutY="489.0" prefHeight="158.0" prefWidth="213.0">
+                          <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="249.20001220703125" minWidth="10.0" prefWidth="79.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="440.59998779296876" minWidth="10.0" prefWidth="134.2" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label text="Tổng Tiền: ">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Tiền Nhận: " GridPane.rowIndex="1">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Tiền Thừa:" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="txtTongTien" prefHeight="30.0" prefWidth="420.0" styleClass="insertText" GridPane.columnIndex="1">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="txtTienNhan" prefHeight="30.0" prefWidth="420.0" styleClass="insertText" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="txtTienThua" prefHeight="30.0" prefWidth="420.0" styleClass="insertText" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+               <graphic>
+                  <FontAwesomeIcon fill="WHITE" glyphName="MONEY" size="3em" wrappingWidth="38.457119941711426" />
+               </graphic>
+          </Tab>
+        </tabs>
+         <stylesheets>
+            <URL value="@../CSS/tabcontrol.css" />
+            <URL value="@../CSS/Login.css" />
+         </stylesheets>
+      </TabPane>
+   </children>
+</AnchorPane>
